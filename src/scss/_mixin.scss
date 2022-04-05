@@ -1,0 +1,67 @@
+@use './variables' as *;
+@use './breakpoints' as *;
+
+@mixin flex($direction, $justify-content, $aligin-item, $column-gap: 0, $row-gap: 0) {
+    display: flex;
+    flex-direction: $direction;
+    align-items: $aligin-item;
+    justify-content: $justify-content;
+    column-gap: $column-gap;
+    row-gap: $row-gap;
+}
+
+@mixin cards-layout($width, $height, $tablet-width, $tablet-height, $mobile-width, $mobile-height) {
+    flex-wrap: wrap;
+    width: 85%;
+    margin: 0 auto;
+
+    img {
+        flex: 0 1 $width;
+        margin: 5px;
+        height: $height;
+        object-position: 50% 50%;
+        object-fit: cover;
+    }
+
+    @include tablet {
+        img {
+            flex: 0 1 $tablet-width;
+            height: $tablet-height;
+        }
+    }
+
+    @include mobile {
+        width: 95%;
+        img {
+            flex: 0 1 $mobile-width;
+            height: $mobile-height;
+        }
+    }
+}
+
+@mixin heading-text() {
+    font-size: $heading-text-size;
+    font-family: $font-family-osake;
+    font-weight: $heading-text-style;
+    text-align: center;
+}
+
+@mixin button() {
+    border: 1px solid white;
+    padding: 1.2rem 2.5rem;
+    font-size: $small-text-size;
+    border-radius: $border-radius;
+    border-width: 2px;
+    transition: 0.3s all;
+
+    &:hover {
+        background-color: white;
+        color: black;
+    }
+
+    @content;
+}
+
+@mixin overlay {
+    background-color: rgba($color: #000000, $alpha: 0.1);
+}
