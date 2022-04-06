@@ -1,0 +1,72 @@
+@use '../../scss/' as *;
+
+.dev-team-wrap {
+    margin-block: $section-padding;
+
+    h1 {
+        @include heading-text;
+    }
+
+    .dev-team-cards-wrap {
+        @include flex(row, center, center);
+        grid-gap: 2rem;
+        flex-wrap: wrap;
+        width: 85%;
+        margin: 0 auto;
+
+        .single-dev-card {
+            @include flex(column, flex-start, center);
+            margin-block: 5rem 0;
+            flex: 0 1 350px;
+
+            p {
+                font-size: $small-text-size;
+                margin-top: 15px;
+            }
+
+            img {
+                width: clamp(350px, 1vw, 350px);
+                height: clamp(350px, 1vw, 350px);
+                object-position: 50% 50%;
+                object-fit: cover;
+            }
+
+            @include tablet {
+                flex: 0 1 260px;
+
+                img {
+                    width: clamp(260px, 1vw, 260px);
+                    height: clamp(260px, 1vw, 260px);
+                }
+            }
+
+            @include mobile {
+                width: 95%;
+
+                flex: 0 1 180px;
+
+                img {
+                    width: clamp(180px, 1vw, 180px);
+                    height: clamp(180px, 1vw, 180px);
+                }
+            }
+        }
+    }
+}
+
+// @include flex(row, center, center);
+// grid-gap: 6rem 2rem;
+// @include cards-layout(350px, 358px, 260px, 260px, 180px, 180px);
+// margin-block: 5rem;
+
+// .single-dev-card {
+//     @include flex(column, flex-start, center);
+//     p {
+//         font-size: $small-text-size;
+//         margin-top: 15px;
+//     }
+// }
+
+// @include mobile {
+//     grid-gap: 8rem 2rem;
+// }

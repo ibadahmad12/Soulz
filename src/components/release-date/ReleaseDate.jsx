@@ -23,7 +23,9 @@ function Cards() {
     return (
         <div className="release-cards-wrap">
             {cards.map(({ img, id }) => (
-                <img src={img} key={id} alt="nft img" />
+                <div>
+                    <img src={img} key={id} alt="nft img" />
+                </div>
             ))}
         </div>
     );

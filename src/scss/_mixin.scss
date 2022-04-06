@@ -15,26 +15,60 @@
     width: 85%;
     margin: 0 auto;
 
-    img {
+    div {
         flex: 0 1 $width;
         margin: 5px;
         height: $height;
-        object-position: 50% 50%;
-        object-fit: cover;
+
+        p,
+        img {
+            width: $width;
+            height: $height;
+        }
+
+        img {
+            width: clamp($width, 1vw, $width);
+            height: clamp($height, 1vw, $height);
+            object-position: 50% 50%;
+            object-fit: cover;
+        }
     }
 
     @include tablet {
-        img {
+        div {
             flex: 0 1 $tablet-width;
             height: $tablet-height;
+
+            p,
+            img {
+                width: $tablet-width;
+                height: $tablet-height;
+            }
+
+            img {
+                width: clamp($tablet-width, 1vw, $tablet-width);
+                height: clamp($tablet-height, 1vw, $tablet-height);
+            }
         }
     }
 
     @include mobile {
         width: 95%;
-        img {
+
+        div {
             flex: 0 1 $mobile-width;
             height: $mobile-height;
+
+            p,
+            img {
+                width: $mobile-width;
+                height: $mobile-height;
+            }
+
+            img {
+                width: clamp($mobile-width, 1vw, $mobile-width);
+                height: clamp($mobile-height, 1vw, $mobile-height);
+            }
         }
     }
 }

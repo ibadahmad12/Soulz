@@ -13,18 +13,28 @@ function Navbar() {
         <nav className="navbar-flex">
             <img src={logo} className="logo" alt="logo" />
             <ul>
-                <li>Home</li>
-                <li>Team</li>
-                <li>Roadmap</li>
+                <li>
+                    <a href="#home">Home</a>
+                </li>
+                <li>
+                    <a href="#team">Team</a>
+                </li>
+                <li>
+                    <a href="#roadmap">Roadmap</a>
+                </li>
                 <li>FAQ</li>
             </ul>
 
             <div className="social-nav-icons">
                 <i>
-                    <FaTwitter size={23} />
+                    <a href="https://twitter.com/SoulZ_NFT" target="_blank" rel="noreferrer">
+                        <FaTwitter size={23} />
+                    </a>
                 </i>
                 <i>
-                    <FaInstagram size={23} />
+                    <a href="https://www.instagram.com/accounts/login/?next=/soulz_nft/" target="_blank" rel="noreferrer">
+                        <FaInstagram size={23} />
+                    </a>
                 </i>
             </div>
 

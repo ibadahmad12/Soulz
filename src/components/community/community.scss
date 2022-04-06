@@ -1,0 +1,37 @@
+@use '../../scss/' as *;
+
+.community-wrap {
+    margin-block: $section-padding;
+
+    h1 {
+        @include heading-text;
+    }
+
+    .community-cards-wrap {
+        @include flex(row, space-around, center);
+        grid-gap: 10rem 0rem;
+        @include cards-layout(380px, 358px, 300px, 260px, 220px, 180px);
+        margin-block: 5rem;
+
+        .single-community-card {
+            @include flex(column, flex-start, center);
+            p {
+                margin-top: 35px;
+                font-size: $small-text-size;
+                text-align: center;
+                font-weight: 500;
+            }
+
+            h6 {
+                margin-top: 10px;
+                font-size: 10px;
+                text-align: center;
+                font-weight: lighter;
+            }
+        }
+
+        @include mobile {
+            grid-gap: 12rem 2rem;
+        }
+    }
+}

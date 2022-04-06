@@ -21,13 +21,16 @@ body {
 }
 
 html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    scroll-behavior: smooth;
     font-size: 100%;
     @include tablet {
         font-size: 80%;
     }
 
     @include mobile {
-        font-size: 60%;
+        font-size: 70%;
     }
 }
 
