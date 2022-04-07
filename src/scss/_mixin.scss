@@ -82,18 +82,19 @@
 
 @mixin button() {
     border: 1px solid white;
-    padding: 1rem 2.2rem;
+    padding: 1.2rem 2.5rem;
     font-size: $small-text-size;
     border-radius: $border-radius;
     border-width: 2px;
     transition: 0.3s all;
     cursor: pointer;
-    @content;
 
     &:hover {
         background-color: white;
         color: black;
     }
+
+    @content;
 }
 
 @mixin overlay {

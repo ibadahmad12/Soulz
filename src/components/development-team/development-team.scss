@@ -58,20 +58,3 @@
         }
     }
 }
-
-// @include flex(row, center, center);
-// grid-gap: 6rem 2rem;
-// @include cards-layout(350px, 358px, 260px, 260px, 180px, 180px);
-// margin-block: 5rem;
-
-// .single-dev-card {
-//     @include flex(column, flex-start, center);
-//     p {
-//         font-size: $small-text-size;
-//         margin-top: 15px;
-//     }
-// }
-
-// @include mobile {
-//     grid-gap: 8rem 2rem;
-// }

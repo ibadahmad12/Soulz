@@ -5,8 +5,8 @@ const backgroundVideo = {
     zIndex: '-1',
     width: '100vw',
     height: 'auto',
-    minHeight: '83vh',
-    maxHeight: '83vh',
+    minHeight: '100vh',
+    maxHeight: '100vh',
     objectPosition: 'center',
     objectFit: 'cover'
 };

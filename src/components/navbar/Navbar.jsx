@@ -5,8 +5,7 @@ import './navbar.scss';
 
 const Navbar = () => {
     useEffect(() => {
-        const burger = document.querySelector('.burger');
-        console.log(burger);
+        const burger = document.querySelector('.hamburger');
         burger?.addEventListener('click', () => {
             burger.classList.toggle('toggle');
         });
@@ -14,7 +13,10 @@ const Navbar = () => {
 
     return (
         <nav className="navbar-flex">
-            <img src={logo} className="logo" alt="logo" />
+            <div className="logo-container">
+                <img src={logo} className="logo" alt="logo" />
+            </div>
+            {/* <div className="mobile-nav-flex"> */}
             <ul>
                 <li>
                     <a href="#home">Home</a>
@@ -25,7 +27,9 @@ const Navbar = () => {
                 <li>
                     <a href="#roadmap">Roadmap</a>
                 </li>
-                <li>FAQ</li>
+                <li>
+                    <a href="#faq">FAQ</a>
+                </li>
             </ul>
 
             <div className="social-nav-icons">
@@ -40,11 +44,12 @@ const Navbar = () => {
                     </a>
                 </i>
             </div>
+            {/* </div> */}
 
-            <div className="burger">
-                <div className="line1" />
-                <div className="line2" />
-                <div className="line3" />
+            <div className="hamburger">
+                <div className="stroke-1" />
+                <div className="stroke-2" />
+                <div className="stroke-3" />
             </div>
         </nav>
     );

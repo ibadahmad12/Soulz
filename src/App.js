@@ -9,6 +9,9 @@ import ReleaseDate from './components/release-date/ReleaseDate';
 import Roadmap from './components/roadmap/Roadmap';
 import Community from './components/community/Community';
 import ArtTeam from './components/art-team/ArtTeam';
+import ModerationTeam from './components/moderation-team/ModerationTeam';
+import Footer from './components/footer/Footer';
+import Accordion from './components/accordion/Accordion';
 
 const App = () => {
     return (
@@ -28,6 +31,11 @@ const App = () => {
             </div>
             <Community />
             <ArtTeam />
+            <ModerationTeam />
+            <div id="faq">
+                <Accordion />
+            </div>
+            <Footer />
         </div>
     );
 };
