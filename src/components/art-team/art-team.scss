@@ -1,0 +1,75 @@
+@use '../../scss/' as *;
+
+.art-team-wrap {
+    margin-block: 12rem $section-padding;
+
+    h1 {
+        @include heading-text;
+    }
+
+    .art-team-cards-wrap {
+        @include flex(row, center, center);
+        grid-gap: 2rem 10rem;
+        flex-wrap: wrap;
+        width: 85%;
+        margin: 5rem auto;
+
+        .single-art-team-card {
+            @include flex(column, flex-start, center);
+            flex: 0 1 260px;
+
+            align-self: flex-start;
+
+            p {
+                margin-top: 35px;
+                font-size: 18px;
+                text-align: center;
+                font-weight: 500;
+            }
+
+            h6 {
+                margin-top: 12px;
+                font-size: 12px;
+                text-align: center;
+                font-weight: 500;
+            }
+
+            a {
+                margin: 70px auto 0px;
+                @include button;
+                font-size: 12px;
+                padding: 0.8rem 1.2rem;
+            }
+
+            img {
+                width: clamp(260px, 1vw, 260px);
+                height: clamp(260px, 1vw, 260px);
+                object-position: 50% 50%;
+                object-fit: cover;
+            }
+
+            @include tablet {
+                flex: 0 1 220px;
+
+                img {
+                    width: clamp(220px, 1vw, 220px);
+                    height: clamp(220px, 1vw, 220px);
+                }
+            }
+
+            @include mobile {
+                width: 95%;
+
+                flex: 0 1 180px;
+
+                img {
+                    width: clamp(180px, 1vw, 180px);
+                    height: clamp(180px, 1vw, 180px);
+                }
+            }
+        }
+        @include tablet {
+            grid-gap: 4rem 8rem;
+        }
+    }
+}

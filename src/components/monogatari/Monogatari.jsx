@@ -1,7 +1,7 @@
 import React from 'react';
 import './monogatari.scss';
 
-function Monogatari() {
+const Monogatari = () => {
     return (
         <div className="monogatari-wrap">
             <h1>Monogatari</h1>
@@ -12,6 +12,6 @@ function Monogatari() {
             </p>
         </div>
     );
-}
+};
 
 export default Monogatari;

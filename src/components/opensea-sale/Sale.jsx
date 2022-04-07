@@ -1,7 +1,7 @@
 import React from 'react';
 import './sale.scss';
 
-function Sale() {
+const Sale = () => {
     return (
         <div className="sale-wrap">
             <h1>
@@ -13,6 +13,6 @@ function Sale() {
             </a>
         </div>
     );
-}
+};
 
 export default Sale;

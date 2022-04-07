@@ -2,7 +2,7 @@ import React from 'react';
 import ramenGif from '../../assets/Ramenshop.gif';
 import './ramen-shop.scss';
 
-function RamenShop() {
+const RamenShop = () => {
     return (
         <div className="ramen-shop-wrap">
             <h1>RAMEN SHOP</h1>
@@ -15,6 +15,6 @@ function RamenShop() {
             </div>
         </div>
     );
-}
+};
 
 export default RamenShop;

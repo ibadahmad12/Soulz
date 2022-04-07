@@ -3,7 +3,7 @@ import backgroundImage from '../../assets/Benx.png';
 import { cards } from '../../Data/ReleaseCards';
 import './release-date.scss';
 
-function ReleaseDate() {
+const ReleaseDate = () => {
     return (
         <>
             <div className="release-date-wrap">
@@ -17,7 +17,7 @@ function ReleaseDate() {
             <Cards />
         </>
     );
-}
+};
 
 function Cards() {
     return (

@@ -1,13 +1,16 @@
-import React, { useState } from 'react';
+import React, { useEffect } from 'react';
 import { FaInstagram, FaTwitter } from 'react-icons/fa';
-import { HiMenuAlt3 } from 'react-icons/hi';
-import { IoMdClose } from 'react-icons/io';
 import logo from '../../assets/favicon.ico';
 import './navbar.scss';
 
-function Navbar() {
-    const [hamburgerOpenClass, setHamburgerOpenClass] = useState('menu-open');
-    const [hamburgerCloseClass, setHamburgerCloseClass] = useState('menu-close');
+const Navbar = () => {
+    useEffect(() => {
+        const burger = document.querySelector('.burger');
+        console.log(burger);
+        burger?.addEventListener('click', () => {
+            burger.classList.toggle('toggle');
+        });
+    }, []);
 
     return (
         <nav className="navbar-flex">
@@ -38,14 +41,13 @@ function Navbar() {
                 </i>
             </div>
 
-            <i className={hamburgerOpenClass}>
-                <HiMenuAlt3 size={30} />
-            </i>
-            <i className={hamburgerCloseClass}>
-                <IoMdClose size={30} />
-            </i>
+            <div className="burger">
+                <div className="line1" />
+                <div className="line2" />
+                <div className="line3" />
+            </div>
         </nav>
     );
-}
+};
 
 export default Navbar;

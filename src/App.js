@@ -8,8 +8,9 @@ import RamenShop from './components/ramen-shop/RamenShop';
 import ReleaseDate from './components/release-date/ReleaseDate';
 import Roadmap from './components/roadmap/Roadmap';
 import Community from './components/community/Community';
+import ArtTeam from './components/art-team/ArtTeam';
 
-function App() {
+const App = () => {
     return (
         <div id="home">
             <Navbar />
@@ -22,12 +23,13 @@ function App() {
             <div id="roadmap">
                 <Roadmap />
             </div>
-            {/* <div id="team">
+            <div id="team">
                 <DevelopmentTeam />
             </div>
-            <Community /> */}
+            <Community />
+            <ArtTeam />
         </div>
     );
-}
+};
 
 export default App;

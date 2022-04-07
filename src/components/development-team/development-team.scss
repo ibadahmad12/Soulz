@@ -12,12 +12,13 @@
         grid-gap: 2rem;
         flex-wrap: wrap;
         width: 85%;
-        margin: 0 auto;
+        margin: 5rem auto;
 
         .single-dev-card {
             @include flex(column, flex-start, center);
-            margin-block: 5rem 0;
             flex: 0 1 350px;
+
+            align-self: flex-start;
 
             p {
                 font-size: $small-text-size;
@@ -50,6 +51,10 @@
                     height: clamp(180px, 1vw, 180px);
                 }
             }
+        }
+
+        @include mobile {
+            grid-gap: 4rem;
         }
     }
 }

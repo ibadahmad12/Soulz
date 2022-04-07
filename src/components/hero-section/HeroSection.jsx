@@ -11,12 +11,12 @@ const backgroundVideo = {
     objectFit: 'cover'
 };
 
-function HeroSection() {
+const HeroSection = () => {
     return (
         <video muted autoPlay loop style={backgroundVideo}>
             <source src={heroSectionVideo} type="video/mp4" />
         </video>
     );
-}
+};
 
 export default HeroSection;

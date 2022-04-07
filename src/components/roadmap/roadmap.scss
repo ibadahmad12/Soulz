@@ -20,7 +20,7 @@
             margin: 0 auto;
             position: relative;
 
-            @include mobile {
+            @include tablet {
                 width: 100%;
             }
         }

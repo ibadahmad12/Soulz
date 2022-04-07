@@ -1,6 +1,12 @@
 @use '../../scss/' as *;
 
 .navbar-flex {
+    position: fixed;
+    top: 0;
+    min-width: 100vw;
+    z-index: 100;
+    background-color: $body-bg;
+
     @include flex(row, space-between, center);
     height: $header-shrink-height;
     padding-inline: 10rem;
@@ -27,9 +33,30 @@
         width: 40px;
     }
 
-    .menu-open,
-    .menu-close {
+    .burger div {
+        width: 25px;
+        height: 3px;
+        background-color: white;
+        margin: 5px;
+        transition: all 0.3s ease;
+    }
+
+    .burger {
         display: none;
+    }
+
+    .toggle {
+        .line1 {
+            transform: rotate(-45deg) translate(-5px, 6px);
+        }
+
+        .line2 {
+            opacity: 0;
+        }
+
+        .line3 {
+            transform: rotate(45deg) translate(-5px, -6px);
+        }
     }
 
     .mobile-nav-flex {
@@ -45,7 +72,7 @@
             display: none;
         }
 
-        .menu-open {
+        .burger {
             display: block;
         }
     }
