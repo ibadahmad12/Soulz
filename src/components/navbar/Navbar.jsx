@@ -1,41 +1,58 @@
-import React, { useState } from 'react';
+import React, { useEffect } from 'react';
 import { FaInstagram, FaTwitter } from 'react-icons/fa';
-import { HiMenuAlt3 } from 'react-icons/hi';
-import { IoMdClose } from 'react-icons/io';
 import logo from '../../assets/favicon.ico';
 import './navbar.scss';
 
-function Navbar() {
-    const [hamburgerOpenClass, setHamburgerOpenClass] = useState('menu-open');
-    const [hamburgerCloseClass, setHamburgerCloseClass] = useState('menu-close');
+const Navbar = () => {
+    useEffect(() => {
+        const burger = document.querySelector('.hamburger');
+        burger?.addEventListener('click', () => {
+            burger.classList.toggle('toggle');
+        });
+    }, []);
 
     return (
         <nav className="navbar-flex">
-            <img src={logo} className="logo" alt="logo" />
+            <div className="logo-container">
+                <img src={logo} className="logo" alt="logo" />
+            </div>
+            {/* <div className="mobile-nav-flex"> */}
             <ul>
-                <li>Home</li>
-                <li>Team</li>
-                <li>Roadmap</li>
-                <li>FAQ</li>
+                <li>
+                    <a href="#home">Home</a>
+                </li>
+                <li>
+                    <a href="#team">Team</a>
+                </li>
+                <li>
+                    <a href="#roadmap">Roadmap</a>
+                </li>
+                <li>
+                    <a href="#faq">FAQ</a>
+                </li>
             </ul>
 
             <div className="social-nav-icons">
                 <i>
-                    <FaTwitter size={23} />
+                    <a href="https://twitter.com/SoulZ_NFT" target="_blank" rel="noreferrer">
+                        <FaTwitter size={23} />
+                    </a>
                 </i>
                 <i>
-                    <FaInstagram size={23} />
+                    <a href="https://www.instagram.com/accounts/login/?next=/soulz_nft/" target="_blank" rel="noreferrer">
+                        <FaInstagram size={23} />
+                    </a>
                 </i>
             </div>
+            {/* </div> */}
 
-            <i className={hamburgerOpenClass}>
-                <HiMenuAlt3 size={30} />
-            </i>
-            <i className={hamburgerCloseClass}>
-                <IoMdClose size={30} />
-            </i>
+            <div className="hamburger">
+                <div className="stroke-1" />
+                <div className="stroke-2" />
+                <div className="stroke-3" />
+            </div>
         </nav>
     );
-}
+};
 
 export default Navbar;

@@ -5,18 +5,18 @@ const backgroundVideo = {
     zIndex: '-1',
     width: '100vw',
     height: 'auto',
-    minHeight: '83vh',
-    maxHeight: '83vh',
+    minHeight: '100vh',
+    maxHeight: '100vh',
     objectPosition: 'center',
     objectFit: 'cover'
 };
 
-function HeroSection() {
+const HeroSection = () => {
     return (
         <video muted autoPlay loop style={backgroundVideo}>
             <source src={heroSectionVideo} type="video/mp4" />
         </video>
     );
-}
+};
 
 export default HeroSection;
