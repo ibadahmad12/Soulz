@@ -1,0 +1,98 @@
+@use '../../scss/' as *;
+
+.accordion-wrapper {
+    margin-block: $section-padding;
+
+    h1 {
+        @include heading-text;
+    }
+
+    .accordion {
+        width: 50%;
+        height: auto;
+        margin: 2rem auto;
+    }
+
+    .accordion .contentBx {
+        position: relative;
+        margin: 30px 20px;
+        border-bottom: 1px solid rgb(233, 225, 225);
+    }
+
+    .accordion .contentBx .label {
+        position: relative;
+        padding: 10px;
+        color: white;
+        font-size: $normal-text-size;
+        cursor: pointer;
+        font-weight: 500;
+    }
+
+    .accordion .contentBx .label::before {
+        content: '+';
+        position: absolute;
+        top: 50%;
+        right: 0px;
+        transform: translateY(-50%);
+        font-size: 1.5em;
+    }
+
+    .accordion .contentBx.active .label::before {
+        content: '-';
+    }
+
+    .accordion .contentBx .content {
+        margin: 10px 0px 0px;
+        padding: 0px 10px;
+        position: relative;
+        background-color: transparent;
+        height: 0;
+        overflow: hidden;
+        transition: 0.3s all ease-out;
+        overflow-y: auto;
+        font-family: 'Open Sans', sans-serif;
+        font-size: clamp(0.5rem, 4vw, 0.9rem);
+        font-weight: 500;
+        p {
+            margin: 10px 0;
+        }
+    }
+
+    .accordion .contentBx.active .content {
+        margin-bottom: 20px;
+        padding: 0px 10px;
+        height: 100px;
+    }
+
+    .accordion .contentBx.active:nth-child(1) .content,
+    .accordion .contentBx.active:nth-child(4) .content {
+        height: 50px;
+    }
+
+    .accordion .contentBx.active:nth-child(2) .content,
+    .accordion .contentBx.active:nth-child(3) .content {
+        height: 70px;
+    }
+
+    @media screen and (max-width: 400px) {
+        .accordion .contentBx .label {
+            max-width: 280px;
+        }
+        .accordion .contentBx .label::before {
+            right: -15px;
+        }
+    }
+
+    @include tablet {
+        .accordion {
+            width: 70%;
+            height: auto;
+        }
+    }
+    @include mobile {
+        .accordion {
+            width: 90%;
+            height: auto;
+        }
+    }
+}

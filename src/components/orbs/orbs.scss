@@ -1,0 +1,50 @@
+@use '../../scss/' as *;
+
+.orbs-wrap {
+    @include flex(column, center, center);
+
+    h1 {
+        @include heading-text;
+    }
+
+    p {
+        font-size: $normal-text-size;
+        font-style: $normal-text-style;
+        text-align: center;
+        width: 60%;
+        padding-inline: 2rem;
+
+        @include tablet {
+            width: 95%;
+        }
+    }
+}
+
+.orb-carousel-wrap {
+    margin-block: $section-padding;
+
+    .orb-carousel-content-wrap {
+        @include flex(column, center, center);
+
+        div {
+            @include flex(row, center, center, 1rem, 0);
+            min-height: 400px;
+
+            i {
+                background-color: none;
+                outline: none;
+                border: none;
+                cursor: pointer;
+            }
+
+            img {
+                width: 70%;
+            }
+        }
+
+        p {
+            font-size: $small-text-size;
+            text-align: center;
+        }
+    }
+}

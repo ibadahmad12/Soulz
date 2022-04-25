@@ -1,0 +1,87 @@
+@use '../../scss/' as *;
+
+.navbar-flex {
+    position: fixed;
+    top: 0;
+    min-width: 100vw;
+    z-index: 100;
+    background-color: $body-bg;
+
+    @include flex(row, space-between, center);
+    height: $header-shrink-height;
+    padding-inline: 10rem;
+
+    .logo-container {
+        // flex: 33%;
+        // border: 1px solid white;
+
+        .logo {
+            width: auto;
+            max-width: 80px;
+            max-height: 80px;
+            align-self: center;
+        }
+    }
+
+    // .mobile-nav-flex {
+    // height: $header-shrink-height;
+    // flex: 67%;
+    // border: 1px solid white;
+    // @include flex(row, space-between, center);
+
+    ul {
+        list-style: none;
+        li {
+            display: inline;
+            padding-inline: 1rem;
+            font-size: $small-text-size;
+        }
+    }
+
+    .social-nav-icons > i {
+        padding-inline: 1.3rem;
+        height: 30px;
+        width: 40px;
+    }
+    // }
+
+    .hamburger div {
+        width: 25px;
+        height: 3px;
+        background-color: white;
+        margin: 5px;
+        transition: all 0.3s ease;
+    }
+
+    .hamburger {
+        display: none;
+    }
+
+    .toggle {
+        .stroke-1 {
+            transform: rotate(-45deg) translate(-5px, 6px);
+        }
+
+        .stroke-2 {
+            opacity: 0;
+        }
+
+        .stroke-3 {
+            transform: rotate(45deg) translate(-5px, -6px);
+        }
+    }
+
+    @include tablet {
+        padding-inline: 2rem;
+        height: $header-height;
+
+        ul,
+        .social-nav-icons {
+            display: none;
+        }
+
+        .hamburger {
+            display: block;
+        }
+    }
+}

@@ -1,0 +1,39 @@
+@use '../../scss/' as *;
+
+.footer-wrap {
+    &:before {
+        content: '';
+        margin-block: 0 2rem;
+        height: 100px;
+        min-width: 100vw;
+        background-color: white;
+    }
+
+    margin-block: $section-padding;
+    padding-inline: 10rem;
+    @include flex(row, space-evenly, center, 4rem, 4rem);
+    flex-wrap: wrap;
+
+    img {
+        height: 150px;
+        width: 150px;
+        align-self: center;
+    }
+
+    h4 {
+        font-size: 22px;
+        font-weight: 700;
+        margin-block: 20px;
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+    p {
+        font-size: $small-text-size;
+        text-align: center;
+    }
+
+    .social-links {
+        @include flex(row, center, center, 10px, 0);
+    }
+}

@@ -1,0 +1,21 @@
+@use '../../scss/' as *;
+
+.monogatari-wrap {
+    @include flex(column, center, center);
+
+    h1 {
+        @include heading-text;
+    }
+
+    p {
+        font-size: $normal-text-size;
+        font-style: $normal-text-style;
+        text-align: center;
+        width: 60%;
+        padding-inline: 2rem;
+
+        @include tablet {
+            width: 95%;
+        }
+    }
+}

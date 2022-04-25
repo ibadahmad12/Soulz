@@ -1,0 +1,14 @@
+@use '../../scss/' as *;
+
+.sale-wrap {
+    margin-block: $section-padding;
+    @include flex(column, center, center, 0, 2rem);
+
+    h1 {
+        @include heading-text;
+    }
+
+    a {
+        @include button;
+    }
+}

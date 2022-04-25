@@ -1,0 +1,67 @@
+@use '../../scss/' as *;
+
+.mod-team-wrap {
+    margin-block: $section-padding;
+
+    h1 {
+        @include heading-text;
+    }
+
+    .mod-team-cards-wrap {
+        @include flex(row, center, center);
+        grid-gap: 2rem;
+        flex-wrap: wrap;
+        width: 88%;
+        margin: 5rem auto;
+
+        .single-mod-team-card {
+            @include flex(column, flex-start, center);
+            flex: 0 1 200px;
+            align-self: flex-start;
+
+            p {
+                margin-top: 5px;
+                font-size: 13px;
+                text-align: center;
+                font-weight: 500;
+            }
+
+            h4 {
+                margin-top: 12px;
+                font-size: 20px;
+                text-align: center;
+                font-weight: 500;
+                letter-spacing: 0.02cm;
+            }
+
+            img {
+                width: clamp(220px, 1vw, 220px);
+                height: clamp(220px, 1vw, 220px);
+                object-position: 50% 50%;
+                object-fit: cover;
+            }
+
+            @include tablet {
+                flex: 0 1 220px;
+
+                img {
+                    width: clamp(220px, 1vw, 220px);
+                    height: clamp(220px, 1vw, 220px);
+                }
+            }
+
+            @include mobile {
+                width: 95%;
+                flex: 0 1 270px;
+
+                img {
+                    width: clamp(270px, 1vw, 270px);
+                    height: clamp(250px, 1vw, 250px);
+                }
+            }
+        }
+        @include tablet {
+            grid-gap: 4rem;
+        }
+    }
+}
