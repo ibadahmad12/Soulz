@@ -4,7 +4,7 @@ import './ramen-shop.scss';
 
 const RamenShop = () => {
     return (
-        <div className="ramen-shop-wrap">
+        <div className="ramen-shop-wrap" data-aos="fade">
             <h1>RAMEN SHOP</h1>
             <div className="ramen-flex-wrap">
                 <img src={ramenGif} alt="ramen gif" className="ramen-img" />

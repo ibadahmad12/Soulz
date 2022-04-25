@@ -12,7 +12,7 @@
         font-style: $normal-text-style;
         text-align: center;
         width: 60%;
-        padding-inline: 2rem;
+        padding: 0 2rem;
 
         @include tablet {
             width: 95%;
@@ -21,7 +21,7 @@
 }
 
 .orb-carousel-wrap {
-    margin-block: $section-padding;
+    margin: $section-padding 0;
 
     .orb-carousel-content-wrap {
         @include flex(column, center, center);

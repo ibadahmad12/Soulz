@@ -3,7 +3,7 @@ import './sale.scss';
 
 const Sale = () => {
     return (
-        <div className="sale-wrap">
+        <div className="sale-wrap" data-aos="fade">
             <h1>
                 Public sale <br />
                 sold out!

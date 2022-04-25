@@ -1,7 +1,7 @@
 @use '../../scss/' as *;
 
 .accordion-wrapper {
-    margin-block: $section-padding;
+    margin: $section-padding 0;
 
     h1 {
         @include heading-text;
@@ -29,16 +29,24 @@
     }
 
     .accordion .contentBx .label::before {
-        content: '+';
+        transition: 0.3s all;
+        content: '';
         position: absolute;
         top: 50%;
         right: 0px;
-        transform: translateY(-50%);
-        font-size: 1.5em;
+        border-color: currentColor;
+        border-style: solid;
+        border-top: none;
+        border-left: none;
+        box-sizing: border-box;
+        transform: translatey(-25%) rotate(45deg);
+        width: 12px;
+        height: 12px;
     }
 
     .accordion .contentBx.active .label::before {
-        content: '-';
+        transform: rotate(-137deg);
+        content: '';
     }
 
     .accordion .contentBx .content {
@@ -47,12 +55,13 @@
         position: relative;
         background-color: transparent;
         height: 0;
-        overflow: hidden;
+        overflow: auto;
         transition: 0.3s all ease-out;
         overflow-y: auto;
         font-family: 'Open Sans', sans-serif;
-        font-size: clamp(0.5rem, 4vw, 0.9rem);
+        font-size: 13px;
         font-weight: 500;
+        letter-spacing: 0.01cm;
         p {
             margin: 10px 0;
         }
@@ -79,6 +88,8 @@
             max-width: 280px;
         }
         .accordion .contentBx .label::before {
+            width: 8px;
+            height: 8px;
             right: -15px;
         }
     }

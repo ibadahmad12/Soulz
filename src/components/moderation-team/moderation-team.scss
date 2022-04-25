@@ -1,7 +1,7 @@
 @use '../../scss/' as *;
 
 .mod-team-wrap {
-    margin-block: $section-padding;
+    margin: $section-padding 0;
 
     h1 {
         @include heading-text;
@@ -9,7 +9,8 @@
 
     .mod-team-cards-wrap {
         @include flex(row, center, center);
-        grid-gap: 2rem;
+        row-gap: 2rem;
+        column-gap: 2rem;
         flex-wrap: wrap;
         width: 88%;
         margin: 5rem auto;
@@ -61,7 +62,8 @@
             }
         }
         @include tablet {
-            grid-gap: 4rem;
+            row-gap: 4rem;
+            column-gap: 4rem;
         }
     }
 }

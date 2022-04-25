@@ -12,7 +12,7 @@
         font-style: $normal-text-style;
         text-align: center;
         width: 60%;
-        padding-inline: 2rem;
+        padding: 2rem 0;
 
         @include tablet {
             width: 95%;

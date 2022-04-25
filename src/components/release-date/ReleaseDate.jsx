@@ -9,7 +9,7 @@ const ReleaseDate = () => {
             <div className="release-date-wrap">
                 <img className="benx-image" src={backgroundImage} alt="girl img" />
                 <div className="overlay">
-                    <h1>
+                    <h1 data-aos="fade">
                         Release date: <br /> 20th of Feb
                     </h1>
                 </div>
@@ -21,7 +21,7 @@ const ReleaseDate = () => {
 
 function Cards() {
     return (
-        <div className="release-cards-wrap">
+        <div className="release-cards-wrap" data-aos="fade">
             {cards.map(({ img, id }) => (
                 <div>
                     <img src={img} key={id} alt="nft img" />

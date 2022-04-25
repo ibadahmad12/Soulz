@@ -10,7 +10,7 @@
     }
 
     margin-block: $section-padding;
-    padding-inline: 10rem;
+    padding: 0 10rem;
     @include flex(row, space-evenly, center, 4rem, 4rem);
     flex-wrap: wrap;
 
@@ -23,14 +23,19 @@
     h4 {
         font-size: 22px;
         font-weight: 700;
-        margin-block: 20px;
+        margin: 0 20px;
         text-align: center;
         text-transform: uppercase;
     }
 
     p {
+        margin-top: 20px;
         font-size: $small-text-size;
         text-align: center;
+    }
+
+    i {
+        margin-top: 18px;
     }
 
     .social-links {

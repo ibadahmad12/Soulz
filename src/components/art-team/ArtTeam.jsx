@@ -7,14 +7,14 @@ import './art-team.scss';
 const ArtTeam = () => {
     return (
         <div className="art-team-wrap">
-            <h1>Art team</h1>
+            <h1 data-aos="fade">Art team</h1>
             <div className="art-team-cards-wrap">
-                <div className="single-art-team-card">
+                <div className="single-art-team-card" data-aos="fade">
                     <img src={img1} alt="temm member 1 img" />
                     <p>Mosseh</p>
                     <h6>Blockchain Developer</h6>
                 </div>
-                <div className="single-art-team-card">
+                <div className="single-art-team-card" data-aos="fade">
                     <img src={img2} alt="temm member 2 img" />
                     <p>なるを</p>
                     <h6>Artist</h6>
@@ -22,7 +22,7 @@ const ArtTeam = () => {
                         Twitter
                     </a>
                 </div>
-                <div className="single-art-team-card">
+                <div className="single-art-team-card" data-aos="fade">
                     <img src={img3} alt="temm member 2 img" />
                     <p>Snowginger</p>
                     <h6>Artist</h6>

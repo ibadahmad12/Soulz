@@ -6,17 +6,17 @@ import './community.scss';
 const Community = () => {
     return (
         <div className="community-wrap">
-            <h1>
+            <h1 data-aos="fade">
                 COMMUNITY <br />
                 MANAGEMENT
             </h1>
             <div className="community-cards-wrap">
-                <div className="single-community-card">
+                <div className="single-community-card" data-aos="fade">
                     <img src={img1} alt="temm member 1 img" />
                     <p>24/7 Pain</p>
                     <h6>Community Manager, Social Director and Circle Artist Failure</h6>
                 </div>
-                <div className="single-community-card">
+                <div className="single-community-card" data-aos="fade">
                     <img src={img2} alt="temm member 2 img" />
                     <p>MekaBaby</p>
                     <h6>Community Relations and Pink Aficionado</h6>

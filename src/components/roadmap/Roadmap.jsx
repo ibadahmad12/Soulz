@@ -4,12 +4,12 @@ import './roadmap.scss';
 const Roadmap = () => {
     return (
         <div className="roadmap-wrap">
-            <h1>ROADMAP</h1>
+            <h1 data-aos="fade">ROADMAP</h1>
             <div className="container">
                 <div className="timeline">
                     <ul>
                         <li>
-                            <div className="timeline-content">
+                            <div className="timeline-content" data-aos="fade">
                                 <h1>Phase 1:</h1>
                                 <p>Launch Twitter</p>
                                 <p>Launch Discord</p>
@@ -17,7 +17,7 @@ const Roadmap = () => {
                             </div>
                         </li>
                         <li>
-                            <div className="timeline-content">
+                            <div className="timeline-content" data-aos="fade">
                                 <h1>Phase 2:</h1>
                                 <p>Mint 7,777 SoulZ</p>
                                 <p>Secondary Market Listing (Opensea, LooksRare)</p>
@@ -27,7 +27,7 @@ const Roadmap = () => {
                             </div>
                         </li>
                         <li>
-                            <div className="timeline-content">
+                            <div className="timeline-content" data-aos="fade">
                                 <h1>Phase 3:</h1>
                                 <p>Holders will be able to claim 1 specially prepared dish from the Ramen shop with an added serum to transform your SoulZ NFT (1/NFT)</p>
                                 <p>SoulZ NFT Vault created for the community</p>
@@ -36,7 +36,7 @@ const Roadmap = () => {
                             </div>
                         </li>
                         <li>
-                            <div className="timeline-content">
+                            <div className="timeline-content" data-aos="fade">
                                 <h1>Phase 4:</h1>
                                 <p>Metaverse 3D playable Characters Claimable for holders</p>
                                 <p>Extra Metaverse lands and Buildings created for use by Holders</p>
@@ -44,7 +44,7 @@ const Roadmap = () => {
                             </div>
                         </li>
                         <li>
-                            <div className="timeline-content">
+                            <div className="timeline-content" data-aos="fade">
                                 <h1>Phase 5:</h1>
                                 <p>P2E Anime Game in production</p>
                                 <p>IRL Events (pending restrictions)</p>

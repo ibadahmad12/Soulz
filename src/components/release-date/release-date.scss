@@ -2,7 +2,7 @@
 
 .release-date-wrap {
     position: relative;
-    margin-block: $section-padding;
+    margin: $section-padding 0;
 
     .benx-image {
         width: 100%;
@@ -24,7 +24,7 @@
 }
 
 .release-cards-wrap {
-    margin-block: $section-padding;
+    margin: $section-padding 0;
     @include flex(row, center, center);
     @include cards-layout(350px, 358px, 230px, 260px, 150px, 180px);
 }

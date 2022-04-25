@@ -6,7 +6,7 @@ import './orbs.scss';
 const Orbs = () => {
     return (
         <>
-            <div className="orbs-wrap">
+            <div className="orbs-wrap" data-aos="fade">
                 <h1>ORBS OF Z</h1>
                 <p>
                     When the planet was attacked, eight Orbs of great force and energy were released by the New Order. When collected, it grants the holder incredible power corresponding to the force
@@ -36,7 +36,7 @@ const OrbsCarousel = () => {
     // }, 5000);
 
     return (
-        <div className="orb-carousel-wrap">
+        <div className="orb-carousel-wrap" data-aos="fade">
             <div className="orb-carousel-content-wrap" key={orb.id}>
                 <div>
                     <i onClick={shiftLeft}>

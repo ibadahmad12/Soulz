@@ -1,7 +1,7 @@
 @use '../../scss' as *;
 
 .ramen-shop-wrap {
-    margin-block: $section-padding;
+    margin: $section-padding 0;
 
     h1 {
         @include heading-text;
