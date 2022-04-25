@@ -5,7 +5,7 @@ import './footer.scss';
 
 const Footer = () => {
     return (
-        <div className="footer-wrap">
+        <div className="footer-wrap" data-aos="fade">
             <div>
                 <h4>Contact</h4>
                 <p>Soulznft@gmail.com</p>

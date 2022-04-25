@@ -1,7 +1,7 @@
 @use '../../scss/' as *;
 
 .dev-team-wrap {
-    margin-block: $section-padding;
+    margin: $section-padding 0;
 
     h1 {
         @include heading-text;
@@ -9,7 +9,8 @@
 
     .dev-team-cards-wrap {
         @include flex(row, center, center);
-        grid-gap: 2rem;
+        column-gap: 2rem;
+        row-gap: 2rem;
         flex-wrap: wrap;
         width: 85%;
         margin: 5rem auto;
@@ -54,7 +55,8 @@
         }
 
         @include mobile {
-            grid-gap: 4rem;
+            row-gap: 4rem;
+            column-gap: 4rem;
         }
     }
 }

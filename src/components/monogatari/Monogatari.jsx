@@ -3,7 +3,7 @@ import './monogatari.scss';
 
 const Monogatari = () => {
     return (
-        <div className="monogatari-wrap">
+        <div className="monogatari-wrap" data-aos="fade">
             <h1>Monogatari</h1>
             <p>
                 3027 AD. An evil regime has taken over the known world. Everything changed when a great force was released by the attack brought upon by the New Order. Orbs of great power were
