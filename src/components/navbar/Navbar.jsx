@@ -7,16 +7,22 @@ import './navbar.scss';
 const Navbar = () => {
     const navigate = useNavigate();
 
+    const homeIconClass = window.location.href.split('/').pop() === '#home' ? 'active' : '';
+    const stakingIconClass = window.location.href.split('/').pop() === 'staking' ? 'active' : '';
+    const faqIconClass = window.location.href.split('/').pop() === '#faq' ? 'active' : '';
+    const teamIconClass = window.location.href.split('/').pop() === '#team' ? 'active' : '';
+    const roadmapIconClass = window.location.href.split('/').pop() === '#roadmap' ? 'active' : '';
+
     useEffect(() => {
         const burger = document.querySelector('.hamburger');
         const navbar = document.querySelector('.navbar-flex');
 
-        burger?.addEventListener('click', () => {
-            burger.classList.toggle('toggle');
-            navbar.classList.toggle('navbar-mobile-flex');
-        });
-
-        underLinednNavLink();
+        if (document.readyState === 'complete') {
+            burger?.addEventListener('click', () => {
+                burger.classList?.toggle('toggle');
+                navbar.classList?.toggle('navbar-mobile-flex');
+            });
+        }
     }, []);
 
     const closeMobileNav = () => {
@@ -27,35 +33,25 @@ const Navbar = () => {
         navbar.classList.remove('navbar-mobile-flex');
     };
 
-    const underLinednNavLink = () => {
-        const items = document.querySelectorAll('ul li');
-        items.forEach((item) => {
-            item.addEventListener('click', () => {
-                document.querySelector('li.active').classList.remove('active');
-                item.classList.add('active');
-            });
-        });
-    };
-
     return (
         <nav className="navbar-flex">
             <div className="logo-container">
                 <img src={logo} className="logo" alt="logo" />
             </div>
             <ul onClick={closeMobileNav}>
-                <li className="active">
+                <li className={homeIconClass}>
                     <a href="/#home">Home</a>
                 </li>
-                <li>
+                <li className={teamIconClass}>
                     <a href="/#team">Team</a>
                 </li>
-                <li>
+                <li className={roadmapIconClass}>
                     <a href="/#roadmap">Roadmap</a>
                 </li>
-                <li>
+                <li className={faqIconClass}>
                     <a href="/#faq">FAQ</a>
                 </li>
-                <li>
+                <li className={stakingIconClass}>
                     <a onClick={() => navigate('/staking')}>Skating</a>
                 </li>
             </ul>

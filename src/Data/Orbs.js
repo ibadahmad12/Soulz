@@ -3,8 +3,8 @@ import img_2 from '../assets/intelligence.gif';
 import img_3 from '../assets/community.gif';
 import img_4 from '../assets/strength.gif';
 import img_5 from '../assets/first.gif';
-import img_6 from '../assets/creation.gif';
-import img_7 from '../assets/stone.gif';
+import img_6 from '../assets/Creation.gif';
+import img_7 from '../assets/Stone.gif';
 import img_8 from '../assets/helpful.gif';
 
 export const orbsGifs = [
