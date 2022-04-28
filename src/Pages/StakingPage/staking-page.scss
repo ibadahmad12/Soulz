@@ -1,0 +1,222 @@
+@use '../../scss/' as *;
+
+* {
+}
+
+.staking-page-container {
+    position: absolute;
+    inset: 0;
+    min-height: 120%;
+    height: 120%;
+    // background: url('https://i.ibb.co/C9tzGNm/ezgif-2-12025beb83.jpg') no-repeat fixed;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    background-size: cover;
+    background-size: 120% 100%;
+    margin: 10vh 0 5vh;
+    text-align: center;
+    background-position: center;
+    font-family: 'Osake';
+
+    @media (max-width: 700px) {
+        background-size: 150% 100%;
+        margin-top: 10vh;
+    }
+
+    .staking-page-overlay {
+        position: absolute;
+        inset: 0;
+        height: 105%;
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    .opensea-heading {
+        padding-top: 9vh;
+        display: grid;
+        grid-template-columns: 1fr;
+        width: 80%;
+        align-items: center;
+        justify-items: center;
+        text-align: center;
+        width: 100%;
+        margin: 0 auto 30px;
+        max-width: 100%;
+        @media (max-width: 768px) {
+            width: 80%;
+        }
+    }
+
+    .header-text {
+        font-size: 7vh;
+        line-height: 7vh;
+        text-shadow: 4px 4px rgb(202, 5, 192);
+        @media (max-width: 768px) {
+            font-size: 4vh;
+            line-height: 4vh;
+        }
+    }
+
+    button {
+        @include button;
+        margin: 30px 0;
+        background-color: transparent;
+        color: white;
+        overflow: hidden;
+        background: rgb(202, 5, 192);
+        box-shadow: 0 0 10px rgb(202, 5, 192), 0 0 20px rgb(202, 5, 192), 0 0 10px rgb(202, 5, 192);
+        border: none;
+        &:hover {
+            background-color: white;
+            color: black;
+        }
+    }
+}
+
+.statistics-container {
+    display: flex;
+    border-radius: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 90%;
+    row-gap: 2rem;
+    min-width: 900px;
+    align-self: center;
+    padding: 2vh 0;
+    margin-top: 4vh;
+    align-items: center;
+    overflow: hidden;
+    margin: 0 auto;
+    @media (max-width: 950px) {
+        min-width: 600px;
+    }
+    @media (max-width: 650px) {
+        min-width: 350px;
+    }
+
+    .statistics {
+        display: flex;
+        flex-grow: 1;
+        flex-direction: column;
+        min-width: 100px;
+        max-width: 200px;
+        margin: 0 1rem;
+        border-image: url('https://i.stack.imgur.com/vUqx9.png') 40 / 40px;
+        border-radius: 2rem;
+        background: transparent;
+        text-shadow: 2px 2px rgb(202, 5, 192);
+        box-shadow: 0 0 10px rgb(202, 5, 192), 0 0 20px rgb(202, 5, 192), 0 0 10px rgb(202, 5, 192);
+        padding: 1rem 0.4em;
+
+        &-title {
+            margin-bottom: 1vh;
+            font-size: 2.5vh;
+            color: white;
+            line-height: 2.5vh;
+            padding: 0 0.5rem;
+            @media (max-width: 1000px) {
+                font-size: 2vh;
+                line-height: 2vh;
+            }
+        }
+
+        &-value {
+            font-size: 2.5vh;
+            color: white;
+            line-height: 2.5vh;
+            @media (max-width: 1000px) {
+                font-size: 2vh;
+                line-height: 2vh;
+            }
+            @media (max-width: 768px) {
+                font-size: 1.5vh;
+                line-height: 1.5vh;
+            }
+        }
+    }
+}
+
+.stake-links-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 100%;
+    margin: auto;
+
+    .stake-link {
+        @include button;
+        text-decoration: none;
+        margin-right: 15px;
+        margin-left: 15px;
+        background-color: trsnaparent;
+        color: white;
+        margin-top: 0vh;
+        margin-bottom: 4vh;
+        border: none;
+        cursor: pointer;
+        padding: 0.7rem 1rem;
+        background: rgb(202, 5, 192);
+        box-shadow: 0 0 10px rgb(202, 5, 192), 0 0 20px rgb(202, 5, 192), 0 0 10px rgb(202, 5, 192);
+        &:hover {
+            background-color: white;
+            color: black;
+        }
+        @media (max-width: 768px) {
+            font-size: 2vh;
+            line-height: 2vh;
+            min-height: 25px;
+            padding-top: 0.65rem;
+        }
+    }
+}
+
+.widgets-container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    border-radius: 20px;
+    background-color: transparent;
+    color: white;
+    z-index: 10;
+    margin: 0 auto;
+    padding: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top: 4vh;
+    margin-bottom: 8vh;
+    width: 30%;
+    border-radius: 2rem;
+    padding: 1rem 0.4em;
+    background: transparent;
+    box-shadow: 0 0 10px rgb(202, 5, 192), 0 0 20px rgb(202, 5, 192), 0 0 10px rgb(202, 5, 192);
+
+    @media (max-width: 768px) {
+        padding-left: 3px;
+        padding-right: 3px;
+        width: 60%;
+    }
+
+    .widgets-title {
+        color: #000;
+        font-size: 4vh;
+        font-weight: 500;
+        color: white;
+        line-height: 4vh;
+        margin-top: 20px;
+        text-shadow: 3px 3px rgb(202, 5, 192);
+
+        @media (max-width: 768px) {
+            font-size: 2vh;
+            line-height: 1.5vh;
+        }
+    }
+
+    .widgets-children {
+        margin: 2rem auto 0;
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 100%;
+    }
+}

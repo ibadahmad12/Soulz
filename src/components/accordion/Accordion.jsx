@@ -33,15 +33,15 @@ const Accordion = () => {
         <div className="accordion-wrapper">
             <h1 data-aos="fade">FAQ</h1>
             <div className="accordion">
-                {accordionItems?.map((item) => {
+                {accordionItems?.map((item, index) => {
                     return (
-                        <div key={item.id} className={`contentBx ${active.includes(item?.id) && 'active'}`}>
+                        <div key={item.id ?? index} className={`contentBx ${active.includes(item?.id) && 'active'}`}>
                             <div className="label" onClick={(e) => toggleElement(item?.id)} data-aos="fade">
                                 {item.title}
                             </div>
                             <div className="content">
                                 {item.answer?.split('\n').map((str) => (
-                                    <p>{urlify(str)}</p>
+                                    <p key={Math.random() * 100}>{urlify(str)}</p>
                                 ))}
                             </div>
                         </div>

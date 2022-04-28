@@ -23,7 +23,7 @@ function Cards() {
     return (
         <div className="release-cards-wrap" data-aos="fade">
             {cards.map(({ img, id }) => (
-                <div>
+                <div key={id}>
                     <img src={img} key={id} alt="nft img" />
                 </div>
             ))}

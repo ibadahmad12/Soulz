@@ -14,7 +14,7 @@ import ArtTeam from './components/art-team/ArtTeam';
 import ModerationTeam from './components/moderation-team/ModerationTeam';
 import Footer from './components/footer/Footer';
 import Accordion from './components/accordion/Accordion';
-import { StakingPage } from './Pages/StakingPage/StakingPage';
+import StakingPage from './Pages/StakingPage/StakingPage';
 
 const App = () => {
     return (
