@@ -52,7 +52,7 @@ const Navbar = () => {
                     <a href="/#faq">FAQ</a>
                 </li>
                 <li className={stakingIconClass}>
-                    <a onClick={() => navigate('/staking')}>Skating</a>
+                    <a onClick={() => navigate('/staking')}>Staking</a>
                 </li>
             </ul>
 
