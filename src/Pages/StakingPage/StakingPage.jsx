@@ -17,7 +17,7 @@ const StakingPage = () => {
             <div className="staking-page-container">
                 <div className="staking-page-overlay">
                     <div className="opensea-heading">
-                        <div className="header-text">Soulz Opnesea DASHBOARD</div>
+                        <div className="header-text">Soulz Staking</div>
                     </div>
                     <StakeStatistics />
                     <button>CONNECT WALLET</button>

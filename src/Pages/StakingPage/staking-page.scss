@@ -8,7 +8,7 @@
     inset: 0;
     min-height: 120%;
     height: 120%;
-    // background: url('https://i.ibb.co/C9tzGNm/ezgif-2-12025beb83.jpg') no-repeat fixed;
+    background: url('../../assets/shop.png') no-repeat fixed;
     background-color: black;
     display: flex;
     flex-direction: column;
@@ -28,7 +28,7 @@
         position: absolute;
         inset: 0;
         height: 105%;
-        background-color: rgba(0, 0, 0, 0.8);
+        background-color: rgba(0, 0, 0, 0.4);
     }
 
     .opensea-heading {
@@ -50,7 +50,7 @@
     .header-text {
         font-size: 7vh;
         line-height: 7vh;
-        text-shadow: 4px 4px rgb(202, 5, 192);
+        text-shadow: 4px 4px rgb(235, 8, 8);
         @media (max-width: 768px) {
             font-size: 4vh;
             line-height: 4vh;
@@ -63,8 +63,8 @@
         background-color: transparent;
         color: white;
         overflow: hidden;
-        background: rgb(202, 5, 192);
-        box-shadow: 0 0 10px rgb(202, 5, 192), 0 0 20px rgb(202, 5, 192), 0 0 10px rgb(202, 5, 192);
+        background: rgb(235, 8, 8);
+        // box-shadow: 0 0 10px rgb(235, 8, 8), 0 0 20px rgb(235, 8, 8), 0 0 10px rgb(235, 8, 8);
         border: none;
         &:hover {
             background-color: white;
@@ -85,6 +85,7 @@
     padding: 2vh 0;
     margin-top: 4vh;
     align-items: center;
+    // box-shadow: 0 0 10px rgb(235, 8, 8), 0 0 20px rgb(235, 8, 8), 0 0 10px rgb(235, 8, 8);
     overflow: hidden;
     margin: 0 auto;
     @media (max-width: 950px) {
@@ -103,9 +104,10 @@
         margin: 0 1rem;
         border-image: url('https://i.stack.imgur.com/vUqx9.png') 40 / 40px;
         border-radius: 2rem;
-        background: transparent;
-        text-shadow: 2px 2px rgb(202, 5, 192);
-        box-shadow: 0 0 10px rgb(202, 5, 192), 0 0 20px rgb(202, 5, 192), 0 0 10px rgb(202, 5, 192);
+        // background: transparent;
+        background: #ffffff57;
+        text-shadow: 2px 2px rgb(235, 8, 8);
+        // box-shadow: 0 0 10px rgb(235, 8, 8), 0 0 20px rgb(235, 8, 8), 0 0 10px rgb(235, 8, 8);
         padding: 1rem 0.4em;
 
         &-title {
@@ -157,8 +159,8 @@
         border: none;
         cursor: pointer;
         padding: 0.7rem 1rem;
-        background: rgb(202, 5, 192);
-        box-shadow: 0 0 10px rgb(202, 5, 192), 0 0 20px rgb(202, 5, 192), 0 0 10px rgb(202, 5, 192);
+        // background: rgb(235, 8, 8);
+        // box-shadow: 0 0 10px rgb(235, 8, 8), 0 0 20px rgb(235, 8, 8), 0 0 10px rgb(235, 8, 8);
         &:hover {
             background-color: white;
             color: black;
@@ -189,8 +191,9 @@
     width: 30%;
     border-radius: 2rem;
     padding: 1rem 0.4em;
-    background: transparent;
-    box-shadow: 0 0 10px rgb(202, 5, 192), 0 0 20px rgb(202, 5, 192), 0 0 10px rgb(202, 5, 192);
+    background: #ffffff57;
+    
+    // box-shadow: 0 0 10px rgb(235, 8, 8), 0 0 20px rgb(235, 8, 8), 0 0 10px rgb(235, 8, 8);
 
     @media (max-width: 768px) {
         padding-left: 3px;
@@ -205,7 +208,7 @@
         color: white;
         line-height: 4vh;
         margin-top: 20px;
-        text-shadow: 3px 3px rgb(202, 5, 192);
+        text-shadow: 3px 3px rgb(235, 8, 8);
 
         @media (max-width: 768px) {
             font-size: 2vh;
