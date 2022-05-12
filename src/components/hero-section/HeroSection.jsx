@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from "react";
 import heroSectionVideo from '../../assets/trailer.mp4';
 
 const backgroundVideo = {
@@ -10,10 +10,21 @@ const backgroundVideo = {
     objectPosition: 'center',
     objectFit: 'cover'
 };
+// var bgvideo = document.getElementById("featureVideo");
 
 const HeroSection = () => {
+    useEffect(() => {
+        var bgvideo = document.getElementById("featureVideo");
+        if (bgvideo) {
+            bgvideo.muted = true;
+            bgvideo.play();
+            console.log("Success")
+        } else {
+            console.log('bgvideo not found');
+        }
+    }, [])
     return (
-        <video muted autoPlay loop style={backgroundVideo}>
+        <video id="featureVideo" muted autoPlay loop playsInline style={backgroundVideo}>
             <source src={heroSectionVideo} type="video/mp4" />
         </video>
     );
