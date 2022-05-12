@@ -17,12 +17,12 @@ const Navbar = () => {
         const burger = document.querySelector('.hamburger');
         const navbar = document.querySelector('.navbar-flex');
 
-        if (document.readyState === 'complete') {
-            burger?.addEventListener('click', () => {
-                burger.classList?.toggle('toggle');
-                navbar.classList?.toggle('navbar-mobile-flex');
-            });
-        }
+        // if (document.readyState === 'complete') {
+        burger?.addEventListener('click', () => {
+            burger.classList?.toggle('toggle');
+            navbar.classList?.toggle('navbar-mobile-flex');
+        });
+        // }
     }, []);
 
     const closeMobileNav = () => {
@@ -74,7 +74,7 @@ const Navbar = () => {
                 </i>
                 <i>
                     <a href="https://opensea.io/collection/soulz-monogatari7777" target="_blank" rel="noreferrer">
-                    <img style={{width: "23px", color: "white"}} src='https://uploads-ssl.webflow.com/61669e248724654baf8b8d74/61a9cc61d78e994d01b7e7e6_opensea%20mini.svg'/>
+                        <img style={{ width: '23px', color: 'white' }} src="https://uploads-ssl.webflow.com/61669e248724654baf8b8d74/61a9cc61d78e994d01b7e7e6_opensea%20mini.svg" />
                     </a>
                 </i>
             </div>
