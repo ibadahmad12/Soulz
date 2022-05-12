@@ -7,7 +7,7 @@ import Navbar from './components/navbar/Navbar';
 import Sale from './components/opensea-sale/Sale';
 import Orbs from './components/orbs/Orbs';
 import RamenShop from './components/ramen-shop/RamenShop';
-import ReleaseDate from './components/release-date/ReleaseDate';
+// import ReleaseDate from './components/release-date/ReleaseDate';
 import Roadmap from './components/roadmap/Roadmap';
 import Community from './components/community/Community';
 import ArtTeam from './components/art-team/ArtTeam';
@@ -40,7 +40,7 @@ const HomeRoutes = () => {
             <HeroSection />
             <Sale />
             <Monogatari />
-            <ReleaseDate />
+            {/* <ReleaseDate /> */}
             <RamenShop />
             <Orbs />
             <div id="roadmap">

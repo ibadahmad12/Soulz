@@ -78,6 +78,7 @@
     font-family: $font-family-osake;
     font-weight: $heading-text-style;
     text-align: center;
+    text-shadow: 4px 4px rgb(235, 8, 8);
 }
 
 @mixin button() {

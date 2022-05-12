@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { FaInstagram, FaTwitter } from 'react-icons/fa';
+import { FaInstagram, FaTwitter, FaDiscord } from 'react-icons/fa';
 import logo from '../../assets/favicon.ico';
 import { useNavigate } from 'react-router-dom';
 import './navbar.scss';
@@ -65,6 +65,16 @@ const Navbar = () => {
                 <i>
                     <a href="https://www.instagram.com/accounts/login/?next=/soulz_nft/" target="_blank" rel="noreferrer">
                         <FaInstagram size={23} />
+                    </a>
+                </i>
+                <i>
+                    <a href="http://discord.com/invite/soulz" target="_blank" rel="noreferrer">
+                        <FaDiscord size={23} />
+                    </a>
+                </i>
+                <i>
+                    <a href="https://opensea.io/collection/soulz-monogatari7777" target="_blank" rel="noreferrer">
+                    <img style={{width: "23px", color: "white"}} src='https://uploads-ssl.webflow.com/61669e248724654baf8b8d74/61a9cc61d78e994d01b7e7e6_opensea%20mini.svg'/>
                     </a>
                 </i>
             </div>

@@ -1,5 +1,5 @@
 import React from 'react';
-import heroSectionVideo from '../../assets/hero-video.mp4';
+import heroSectionVideo from '../../assets/trailer.mp4';
 
 const backgroundVideo = {
     zIndex: '-1',
